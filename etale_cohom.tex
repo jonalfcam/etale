@@ -1,0 +1,278 @@
+\documentclass[english]{amsart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+\usepackage{xypic,amsthm,amssymb,hyperref,amsmath,graphicx,stmaryrd,boxedminipage,mathrsfs,fullpage,manfnt}
+\usepackage[all]{xy}
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\usepackage[mathcal]{euscript}
+\usepackage{calligra}
+\usepackage{sseq}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\Q}{\mathbf{Q}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\sma}{\wedge}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\ti}{\;\;\makebox[0pt]{$\top$}\makebox[0pt]{$\cap$}\;\;}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\gl}{\mathfrak{gl}}
+\newcommand{\SL}{\operatorname{SL}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\renewcommand{\o}{\mathfrak{o}}
+\newcommand{\SO}{\operatorname{SO}}
+\newcommand{\so}{\mathfrak{so}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\symp}{\mathfrak{sp}}
+\newcommand{\SU}{\operatorname{SU}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\ext}{\operatorname{Ext}}
+\newcommand{\tor}{\operatorname{Tor}}
+\renewcommand{\hom}{\operatorname{Hom}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\obj}{\operatorname{obj}}
+\newcommand{\id}{\operatorname{Id}}
+\newcommand{\st}{\operatorname{st}}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\syl}{\operatorname{Syl}}
+\newcommand{\var}{\operatorname{Var}}
+\newcommand{\ann}{\operatorname{Ann}}
+\newcommand{\gal}{\operatorname{Gal}}
+\newcommand{\nil}{\operatorname{nil}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\res}{\operatorname{Res}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\rel}{\operatorname{rel}}
+\newcommand{\vect}{\operatorname{Vect}}
+\newcommand{\boxit}[1]{\begin{boxedminipage}{13cm} #1 \end{boxedminipage}}
+\newcommand{\triv}{\operatorname{Triv}}
+\newcommand{\Sq}{\operatorname{Sq}}
+\newcommand{\sq}{\operatorname{Sq}}
+\newcommand{\aind}{\operatorname{a-ind}}
+\newcommand{\tind}{\operatorname{t-ind}}
+\newcommand{\mo}{\mathbf{MO}}
+\newcommand{\ch}{\operatorname{ch}}
+\newcommand{\td}{\operatorname{Td}}
+\newcommand{\ahat}{\widehat{A}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\colim}{\operatorname{colim}}
+\newcommand{\weakequiv}{\xrightarrow{\sim}}
+\newcommand{\cofib}{\hookrightarrow}
+\newcommand{\fib}{\twoheadrightarrow}
+\newcommand{\xycofib}{^{(}->}
+\newcommand{\xyfib}{->>}
+\newcommand{\Ho}{\operatorname{Ho}}
+\newcommand{\holim}{\operatorname{holim}}
+\newcommand{\hocolim}{\operatorname{hocolim}}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\Shom}{\text{\calligra Hom}}
+\renewcommand{\div}{\operatorname{div}}
+\newcommand{\Weil}{\operatorname{Weil}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\fun}{\operatorname{Fun}}
+\newcommand{\mc}{\mathcal}
+\newcommand{\hh}{\operatorname{HH}}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\thh}{\operatorname{THH}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\spsh}{\operatorname{sPSh}}
+\newcommand{\Map}{\operatorname{Map}}
+\newcommand{\EP}{\widetilde{E}\mathcal{P}}
+\newcommand{\height}{\operatorname{ht}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\spf}{\operatorname{Spf}}
+\newcommand{\cart}{\operatorname{Cart}}
+\newcommand{\Cart}{\text{Cart}}
+\newcommand{\W}{\mathbf{W}}
+\newcommand{\ques}[1]{\textcolor{red}{#1}}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{prop}{Proposition}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{proto}{Proto-Theorem}
+\newtheorem*{claim}{Claim}
+
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{rmk}{Remark}
+\newtheorem*{nota}{Notation}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{fact}{Fact}
+
+
+\title{Etale Cohomology}
+\author{Jonathan Campbell}
+\begin{document}
+\maketitle
+\tableofcontents 
+
+
+\section{Basic Stuff I should Have Known / Need to Remember}
+
+Completions - 
+
+
+Separable
+\begin{defn}
+A field extension is \textbf{separable} if it's minimal polynomial is separable (i.e. no repeated roots, i.e. $f'(a) \neq 0$ for root $a$)
+\end{defn}
+
+The 100 forms of Nakayama's Lemma
+
+Topological aspects of schemes that always confused me. 
+
+
+Ring extensions
+
+Differentials
+
+
+\section{Local Theory}
+
+\subsection{Flatness}
+
+For something with so many consequences I find it useful to separate into a few different cases. For example, I like to consider
+\begin{itemize}
+\item Characterization
+\item Properties
+\item Consequences
+\item Special Cases / Examples 
+\end{itemize}
+
+Start with \textbf{characterizations} of flat morphisms (of rings). After that, it's flat modules. 
+
+\begin{thm}
+A morphism $A \to B$ is flat if any of the following hold
+\begin{itemize}
+\item The functor $M \mapsto B \otimes_A M$ is exact
+\item For all ideals $I \subset A$, the homomoprhism $I \otimes_A B \to B$ given by $a \otimes b \mapsto f(a) b$ is injective. 
+\end{itemize}
+\end{thm}
+
+Some \textbf{properties} are not so hard to come by 
+\begin{prop}
+Flatness plays well with localization. 
+\end{prop}
+
+\begin{rmk}
+In practice, this means that flatness can be checked locally. That is, $f: A\to B$ is flat if for all $\mf{n} \subset B$, $A_{f^{-1}(\mf{n})} \to B_{\mf{n}}$ is flat. That is, usually flatness only has to be check on local rings. 
+\end{rmk}
+
+Other properties that are key
+
+\begin{prop}-
+\begin{enumerate}
+\item Open immersions are flat
+\item Flat morphisms compose
+\item They pullback. 
+\end{enumerate}
+\end{prop}
+
+
+\textbf{Special Cases}
+
+\begin{enumerate}
+\item For $A$ an integral domain $A \to B$ is flat implies $A \to B$ injective. 
+\item For $A$ a Dedekind domain $A \to B$ is flat iff $A \to B$ is injective. 
+\end{enumerate}
+
+
+\textbf{Flat Modules}
+
+There are a bunch of equivalent characterizations for flat modules
+
+\begin{thm}
+Let $M$ be a finitely generated $A$-module. TFAE
+\begin{enumerate}
+\item $M$ is flat
+\item $M_{\mf{m}}$ is free as an $A_{\mf{m}}$ module
+\item $\widetilde{M}$ is a locally free sheaf on $\Spec A$
+\item $M$ is projective. 
+\item (Special case) For $A$ an integral domain, then everything is equiv to $\dim_{k(\mf{p})} (M\otimes_A k(\mf{p}))$ is the same for all primes $\mf{p}$. 
+\end{enumerate}
+\end{thm}
+
+The algebraic notion of flatness is used to define the geometric notion. 
+
+
+
+\subsection{Ramified-Ness}
+
+\ques{I guess this is supposed to be something in number theory, right? Where is it useful? }
+
+here's the ring-theoretic notion;
+
+\begin{defn}
+A local morphism $A \to B$ is \textbf{unramified} if $B/f(\mf{m}_a) B$ is a finite separable field extension of $A/\mf{m}_A$. 
+\end{defn}
+
+\begin{rmk}
+A finite field extension is ramified iff it is separable. 
+\end{rmk}
+
+
+For schemes: The notion of ramified is defined for locally finite type maps. 
+
+\begin{defn}
+A locally finite type morphism of schemes $X \to Y$ is \textbf{unramified} if at $y \in Y$ if $\mc{O}_{Y,y}/ \mf{m}_x \mc{O}_{X,x}$ is a finite separable field extension of $k(x)$. 
+\end{defn}
+
+\begin{rmk}
+A morphism $X \to Y$ is formally unramified if $\Omega_{X/Y} = 0$. When $X \to Y$ is locally of finite type this is equivalent to the above definition. 
+\end{rmk}
+
+We finally have characterizations of unramified morphisms
+
+\begin{thm}
+$Y \to X$ locally of finite type. 
+\begin{enumerate}
+\item $f$ unramified
+\item For all $x \in X$, $Y_x \to \Spec k(x)$ unramified
+\item All geometric fibers of $f$ are unramified
+\item For all $x \in X$, $Y_x \cong \coprod \Speck k_i$ where $k_i$ are finite separable field extensions of $k(x)$
+\item The sheaf $\Omega^1_{X/Y} = 0$
+\item The diagonal morphism $\Delta_{Y/X} : Y \to Y \times_X Y$ is an open immersion. 
+\end{enumerate}
+\end{thm}
+\begin{proof}
+
+\end{proof}
+
+\textbf{Geometric Examples}
+
+\begin{example}
+$k[y] \to k[x]$, $y \mapsto x^2$. 
+\end{example}
+
+
+
+\subsection{Etale-Ness}
+
+\begin{defn}
+\textbf{Etale} means smooth and unramified. 
+\end{defn}
+
+\subsection{Henselian Rings}
+
+
+
+
+
+
+\end{document}
